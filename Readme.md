@@ -34,3 +34,8 @@
 
 - `CPU`: Central Processing Unit - Prozessor
 - `RAM`: Random Access Memory - Arbeitsspeicher. Kurzzeitspeicher
+
+# Links
+
+<https://www.markdownguide.org/basic-syntax/#links>
+

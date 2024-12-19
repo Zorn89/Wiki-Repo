@@ -74,3 +74,31 @@ if istgerade:
 
 else: 
     print("Die Zahl ist ungerade.")
+
+
+## Schnellsuche für das kleine Hirn
+
+^ = and
+v = oder -> Voder
+
+    - if = Bedingung
+    - elif = Folgebedingung 
+    - else = Endebedingung
+
+float = Zahl
+
+Print = Ausgabe im Terminal 
+Pring f = fast mehrere Bedingungen zusammen
+
+cd = Ordner öffnen
+cd .. = zurück 
+ 
+Input = Eingabe durch User
+
+Import = Import von Paketen
+
+Bsp. Ordnerfolge: datetime.datetime.now
+    - datetime.datetime -> Hauptordner
+    - datetime -> Unterordner 
+    - now -> Datei 
+
