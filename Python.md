@@ -32,3 +32,45 @@ Python ist eine Programmiersprache
  - Mapping - Dict
  - Sets - Set, Frozenset 
  
+
+## print f
+
+ ### Beispiel für Abfrage Namen und Anzeige des Namens
+
+ person1 = input("Wie ist dein Vorname?")
+person2 = input("Wie ist dein Nachnahme?")
+
+print(f"Dein Name ist: {person1} {person2}") 
+
+
+### Beipiel für Zahleneingabe und Addition (bzw Rechenoperation) 
+
+zahl1 = input("Nenne bitte eine Zahl?")
+zahl2 = input("Nenne bitte eine weitere Zahl?")
+
+zahl1_int = int(zahl1)
+zahl2_int = int(zahl2)
+print(f"Die Summe ergibt: {zahl1_int + zahl2_int}")
+
+
+
+## Bsp für Zahlen positiv bzw negativ. IF Aufgabe
+
+zahl = float(input("Gib eine Zahl ein:"))
+
+if zahl > 0:
+    print("Die Zahl ist positiv")
+
+elif zahl == 0:
+    print("Die Zahl ist null")
+
+else : 
+    print("Die Zahl ist negativ")
+
+istgerade = (zahl == 2 and zahl != -1) or (zahl % 2 == 0)
+
+if istgerade: 
+    print("Die Zahl ist gerade.")
+
+else: 
+    print("Die Zahl ist ungerade.")
