@@ -12,3 +12,7 @@
 
 alt aber gut
 <https://www.youtube.com/watch?v=c5uj8M3fOa4>
+
+# Python Komplettkurs
+
+<https://www.youtube.com/watch?v=e6vPt_e9sRw>
