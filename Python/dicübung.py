@@ -24,3 +24,7 @@ if deutsches_wort in woerterbuch:
     print(f"Die englische Übersetzung von '{deutsches_wort}' ist '{woerterbuch[deutsches_wort]}'.")
 else:
     print(f"Fehler: Das Wort '{deutsches_wort}' ist nicht im Wörterbuch enthalten.")
+
+
+# Zusatz
+
