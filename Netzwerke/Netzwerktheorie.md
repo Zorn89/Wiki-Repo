@@ -45,3 +45,42 @@ Hier ist gemeint, dass das Internet mehrere einzelne Netzwerke zu einem großen 
 ## Was ist der Unterschied zwischen einer MAC-Adresse und einer IP-Adresse? 
 
 Die MAC-Adresse bezeichnet den physischen Standort eines Geräts innerhalb eines lokalen Netzwerks (Hardware, zu finden in der Netzwerkkarte des Rechners), während die IP-Adresse die globale oder über das Internet zugängliche Identität des Geräts angibt. Die Ip ist temporär und kann sich ändern lassen. 
+
+
+## Was genau ist eine Subnetzmaske? 
+
+So wie jede Adresse durch einen Straßennamen und eine Hausnummer definiert ist, besteht eine IP-Adresse aus einer Netzwerkkomponente und einer Host-Komponente (hier findest du heraus, was deine IP-Adresse ist). Nehmen wir 192.168.123.132 als Beispiel. Die ersten drei Oktette (192.168.123.) stehen für das Netzwerk und das letzte Oktett identifiziert einen Rechner in deinem Netzwerk.Die Subnetzmaske spiegelt den Netzwerkanteil in einer IP-Adresse wider.
+
+**Zweck der Subnetzmaske**
+
+Die Subnetzmaske hilft dabei, Datenpakete im Netzwerk korrekt zu routen, indem sie es Routern und Computern ermöglicht, zu entscheiden, ob ein Zielgerät innerhalb des eigenen Netzwerks oder in einem anderen Netzwerk liegt. Wenn die Zieladresse im gleichen Netzwerk ist, wird das Paket direkt zugestellt, andernfalls wird es an den Router gesendet.
+
+
+## Wie funktioniert das Routing, wenn ich eine Adresse außerhalb meines Subnetzes erreichen möchte? 
+
+Wenn du eine Adresse außerhalb deines eigenen Subnetzes erreichen möchtest, muss das Routing über einen Router erfolgen. Das Routing funktioniert so, dass der Router dafür zuständig ist, Datenpakete von einem Netzwerk in ein anderes zu übertragen.
+
+1. Überprüfung der Zieladresse
+
+Wenn ein Gerät in deinem Netzwerk ein Paket an eine IP-Adresse senden möchte, prüft es zuerst, ob die Ziel-IP-Adresse innerhalb des gleichen Subnetzes liegt. Das passiert, indem die eigene IP-Adresse mit der Subnetzmaske und der Ziel-IP-Adresse verglichen wird.
+
+Wenn die Ziel-IP-Adresse nicht im selben Subnetz liegt, muss das Paket an einen Router geschickt werden, der es weiterleitet.
+
+2. Paket an den Router senden
+
+Das Paket wird an den Standardgateway gesendet. Der Standardgateway ist in den Netzwerkeinstellungen deines Geräts definiert. Der Router ist dafür verantwortlich, das Paket weiterzuleiten.
+
+3. Routenentscheidung des Routers
+
+Der Router empfängt das Paket und prüft die Ziel-IP-Adresse, um zu entscheiden, wohin es weitergeleitet werden soll. Der Router verwendet dazu seine Routing-Tabelle, die Informationen darüber enthält, wie er Daten an verschiedene Netzwerke weiterleiten kann.
+
+- Wenn der Router die Zieladresse direkt erreichen kann, wird das Paket an das entsprechende Zielnetzwerk weitergeleitet.
+- Falls der Router die Zieladresse nicht direkt erreichen kann, wird das Paket an den nächsten Router weitergeleitet, der möglicherweise näher an dem Zielnetzwerk liegt. Dies wird als Weiterleitung (Forwarding) bezeichnet.
+
+4. Route über mehrere Router
+
+Falls die Zieladresse noch weiter entfernt ist, kann das Paket über mehrere Router weitergeleitet werden, bis es das Zielnetzwerk erreicht. Jeder Router entlang des Weges entscheidet anhand seiner Routing-Tabelle, wie er das Paket weiterleitet.
+
+5. Erreichen des Zielnetzwerks
+
+Schließlich wird das Paket von einem Router oder Gateway in das Zielnetzwerk weitergeleitet, und der Router, der direkt im Zielnetzwerk steckt, leitet das Paket dann an das entsprechende Zielgerät weiter.
